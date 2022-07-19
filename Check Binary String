@@ -1,0 +1,24 @@
+class Sol
+{
+    Boolean checkBinary (String s)
+    {
+        // your code here
+        // getting range for n between the string
+         int i=s.indexOf("1");
+       int j=s.lastIndexOf("1");
+       //checking for true i.e 1 in continuation
+       if(i==j||i==-1)
+       {
+           return true;
+       }
+       //checking for 0 in between
+       for(int k=i+1;k<j;k++)
+       {
+           if(s.charAt(k)=='0')
+           {
+               return false;
+           }
+       }
+       return true;
+    }
+}
